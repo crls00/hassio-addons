@@ -6,9 +6,9 @@ ENV LANG C.UTF-8
 RUN mkdir /run/apache2
 
 RUN apk update && apk upgrade
-RUN echo '@php72 http://dl-cdn.alpinelinux.org/alpine/v3.9/community/' >> /etc/apk/repositories
+RUN echo '@php72 http://dl-cdn.alpinelinux.org/alpine/v3.9/community' >> /etc/apk/repositories
 RUN apk --no-cache add apache2 php7-apache2@php72 libxml2-dev apache2-utils apache2-mod-wsgi apache2-ssl
-RUN apk --no-cache add php7@php72 php7-fpm@php72 php7-mysqli@php72 php7-opcache@php72 php7-gd@php72 php7-mysqli@php72 php7-zlib@php72 php7-curl@php72 php7-phar@php72 php7-json@php72@php72 php7-mbstring@php72 php7-mcrypt@php72 php7-zip@php72 php7-simplexml@php72
+RUN apk --no-cache add php7@php72 php7-fpm@php72 php7-mysqli@php72 php7-opcache@php72 php7-gd@php72 php7-zlib@php72 php7-curl@php72 php7-phar@php72 php7-json@php72 php7-mbstring@php72 php7-mcrypt@php72 php7-zip@php72 php7-simplexml@php72
 RUN apk --no-cache add mariadb-client
 
 # Copy data for add-on
