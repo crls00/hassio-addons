@@ -1,5 +1,5 @@
-ARG alpine:3.8
-FROM $BUILD_FROM
+ARG BUILD_FROM
+FROM alpine:3.8
 ENV LANG C.UTF-8
 
 # Create directory for apache2 to store PID file
